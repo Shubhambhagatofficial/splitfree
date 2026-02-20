@@ -32,7 +32,7 @@ func Load() {
 		SendGridFrom:     getEnv("SENDGRID_FROM_EMAIL", "noreply@splitapp.com"),
 		FirebaseCredPath: getEnv("FIREBASE_CREDENTIALS", "firebase-credentials.json"),
 		AppName:          getEnv("APP_NAME", "SplitFree"),
-		AppURL:           getEnv("APP_URL", "http://localhost:8080"),
+		AppURL:           getEnv("APP_URL", "https://splitfree-production.up.railway.app"),
 	}
 }
 
