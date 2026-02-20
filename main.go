@@ -85,7 +85,7 @@ func main() {
 	// Start server
 	port := config.AppConfig.Port
 	log.Printf("🚀 %s server starting on port %s", config.AppConfig.AppName, port)
-	log.Printf("📡 API docs: http://localhost:%s/health", port)
+	log.Printf("📡 API docs: http://%s:%s/health", config.AppConfig.AppURL, port)
 
 	addr := "0.0.0.0:" + port
 	log.Printf("🚀 Listening on %s", addr)
