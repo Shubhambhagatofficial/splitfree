@@ -87,7 +87,9 @@ func main() {
 	log.Printf("🚀 %s server starting on port %s", config.AppConfig.AppName, port)
 	log.Printf("📡 API docs: http://localhost:%s/health", port)
 
-	if err := r.Run(":" + port); err != nil {
+	addr := "0.0.0.0:" + port
+	log.Printf("🚀 Listening on %s", addr)
+	if err := r.Run(addr); err != nil {
 		log.Fatal("Failed to start server:", err)
 	}
 }
